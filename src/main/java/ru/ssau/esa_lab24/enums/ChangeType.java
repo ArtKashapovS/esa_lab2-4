@@ -1,4 +1,4 @@
-package com.example.esa_lab2.enums;
+package ru.ssau.esa_lab24.enums;
 
 public enum ChangeType {
     INSERT,

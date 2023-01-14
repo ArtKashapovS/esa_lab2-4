@@ -1,2 +1,4 @@
-package ru.ssau.esa_lab24.jms.dto;public class EmailNotificationReceiver {
+package ru.ssau.esa_lab24.jms;
+
+public class EmailNotificationReceiver {
 }
