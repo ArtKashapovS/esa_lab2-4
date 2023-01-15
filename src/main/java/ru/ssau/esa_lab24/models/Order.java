@@ -29,6 +29,7 @@ public class Order extends BaseEntity{
     private int price;
 
     @Column(name = "create_dt", nullable = false)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date createDT;
 
     public void addItem(Item item) {
