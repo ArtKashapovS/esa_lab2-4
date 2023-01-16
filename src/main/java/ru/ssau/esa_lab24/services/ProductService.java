@@ -2,6 +2,7 @@ package ru.ssau.esa_lab24.services;
 
 import org.springframework.stereotype.Service;
 import ru.ssau.esa_lab24.models.Product;
+import ru.ssau.esa_lab24.models.Seller;
 import ru.ssau.esa_lab24.repositories.ProductRepository;
 
 import java.util.List;
@@ -21,7 +22,15 @@ public class ProductService {
         return foundProduct.orElse(null);
     }
 
+    public List<Product> findBySeller(Seller seller) {
+        return productRepository.findBySeller(seller);
+    }
+
     public List<Product> findAll(){
         return productRepository.findAll();
+    }
+
+    public void save(Product product) {
+        productRepository.save(product);
     }
 }

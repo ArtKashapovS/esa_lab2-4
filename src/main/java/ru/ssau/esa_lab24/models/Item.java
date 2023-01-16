@@ -26,7 +26,7 @@ public class Item implements Serializable {
     private Order order;
 
     @OneToOne
-    @JoinColumn(name = "product", nullable = false)
+    @JoinColumn(name = "product_id", referencedColumnName = "id", nullable = false)
     private Product product;
 
     @Column(name = "count", nullable = false)

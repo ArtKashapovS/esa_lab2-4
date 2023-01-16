@@ -25,8 +25,8 @@ public class Order extends BaseEntity{
     @Column(name = "status", nullable = false)
     private String status;
 
-    @Column(name = "price", nullable = false)
-    private int price;
+    @Column(name = "goods_total", nullable = false)
+    private int goodsTotal;
 
     @Column(name = "create_dt", nullable = false)
     @Temporal(TemporalType.TIMESTAMP)

@@ -13,6 +13,6 @@ import javax.persistence.*;
 @Setter
 public class Category extends BaseEntity {
 
-    @Column(name = "Category", nullable = false)
+    @Column(name = "name", nullable = false)
     public String name;
 }

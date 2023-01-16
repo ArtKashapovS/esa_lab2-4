@@ -1,12 +1,14 @@
 package ru.ssau.esa_lab24.jms;
 
 import org.springframework.jms.annotation.JmsListener;
+import org.springframework.stereotype.Component;
 import ru.ssau.esa_lab24.jms.dto.EntityChangeRecord;
 import ru.ssau.esa_lab24.models.EntityChangeLog;
 import ru.ssau.esa_lab24.services.EntityChangeLogService;
 
 import java.time.LocalDate;
 
+@Component
 public class EntityChangeReceiver {
     private EntityChangeLogService entityChangeLogService;
 
