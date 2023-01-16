@@ -35,11 +35,6 @@ public class CategoriesRESTController {
     @GetMapping(value = "/categories", produces = MediaType.APPLICATION_XML_VALUE)
     public ModelAndView getCategoriesXml() throws JsonProcessingException {
         List<Category> categories = categoryService.findAll();
-
-        for (Category category : categories){
-            System.out.println(category.getName() + category.isDeleted());
-        }
-
         ModelAndView modelAndView = new ModelAndView("categories");
         Source source = new StreamSource(new ByteArrayInputStream(new XmlMapper().writeValueAsBytes(categories)));
         modelAndView.addObject(source);
