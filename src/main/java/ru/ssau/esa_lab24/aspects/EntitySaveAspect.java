@@ -27,7 +27,7 @@ public class EntitySaveAspect {
         this.topic = jmsTemplate.getConnectionFactory().createConnection().createSession().createTopic("entityChange");
     }
 
-    @Around("@annotation(ru.ssau.esa_lab24.annotations.SaveEntityLoggable)")
+    @Around("execution(* ru.ssau.esa_lab24.repositories.*Repository.save(..))")
     private Object log(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         BaseEntity savingEntity = (BaseEntity) Arrays.stream(proceedingJoinPoint.getArgs()).findFirst().get();
         EntityChangeRecord record = new EntityChangeRecord();
