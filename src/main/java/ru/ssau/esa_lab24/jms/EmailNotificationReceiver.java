@@ -23,6 +23,6 @@ public class EmailNotificationReceiver {
         entityChangeLog.setEntityId(entityChangeRecord.getEntityId());
         entityChangeLog.setChangeDate(LocalDate.now());
         entityChangeLog.setChangeType(entityChangeRecord.getChangeType());
-        emailSenderService.sendSimpleEmail("voevodin_anton_2000@mail.ru", "entityChange", entityChangeLog.toString());
+        emailSenderService.sendSimpleEmail("ar.spamovich@gmail.com", "entityChange", entityChangeLog.toString());
     }
 }
